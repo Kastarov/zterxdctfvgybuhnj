@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Insurance Animation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f5f5f5;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .text-box {
+      max-width: 300px;
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #f85e4b;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .image-box {
+      position: relative;
+      transition: transform 1s ease;
+    }
+
+    .image-box.moved {
+      transform: translateX(50px) rotate(1deg);
+    }
+
+    img {
+      max-height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-box">
+      <p style="color: tomato;">MEET BELLO</p>
+      <div class="title">A New Kind Of Life Insurance</div>
+      <p>Secure your family's financial future, in as little as 10 minutes.</p>
+      <button class="button" onclick="moveImage()">GET MY PRICE →</button>
+    </div>
+    <div class="image-box" id="animatedBox">
+      <img src="./hero 1.png" alt="Insurance Family" />
+    </div>
+  </div>
+
+  <script>
+    function moveImage() {
+      const box = document.getElementById('animatedBox');
+      box.classList.toggle('moved');
+    }
+  </script>
+</body>
+</html>
